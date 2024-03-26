@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const includeNumeric = numericCheckbox.checked;
       const includeSymbols = symbolsCheckbox.checked;
       const password = generatePassword(length, includeLowercase, includeUppercase, includeNumeric, includeSymbols);
-      passwordOutput.value = password;
+      const password2=password===  "undefined".repeat(length)?"please":password
+      passwordOutput.value = password2
     });
   
     copyBtn.addEventListener('click', function() {
